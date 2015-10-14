@@ -488,7 +488,7 @@ class AccessToken(OAuthView, Mixin):
             pass
 
         return HttpResponse(
-            json.dumps(response_data), mimetype='application/json'
+            json.dumps(response_data), content_type='application/json'
         )
 
     def authorization_code(self, request, data, client):
