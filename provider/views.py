@@ -298,7 +298,7 @@ class Redirect(OAuthView, Mixin):
         Return an error response to the client with default status code of
         *400* stating the error as outlined in :rfc:`5.2`.
         """
-        return HttpResponse(json.dumps(error), content_type=mimetype,
+        return HttpResponse(json.dumps(error), content_type=content_type,
                 status=status, **kwargs)
 
     def get(self, request):
